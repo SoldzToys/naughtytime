@@ -4,7 +4,7 @@
   "description": "a bot for nsfw",
   "main": "area.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+   "start": "node area.js"
   },
   "author": "Soldz",
   "license": "ISC",
