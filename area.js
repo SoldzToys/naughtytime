@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Dicord.Client();
+const client = new Discord.Client();
 const config = require('./botconfig.json');
 const { prefix, token } = require('./botconfig.json');
 
