@@ -17,7 +17,7 @@ client.on('message', async (message) => {
   
     if (message.content.startsWith(`${prefix}anal`)) {
       if (!message.channel.nsfw)
-      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/anal')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -29,7 +29,373 @@ client.on('message', async (message) => {
             message.channel.send(lewdembed);
         })
     }
+  
+    if (message.content.startsWith(`${prefix}avatar`)) {
+    superagent.get('https://nekos.life/api/v2/img/avatar')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Anime Avatar! 👍`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+     if (message.content.startsWith(`${prefix}baka`)) {
+     superagent.get('https://nekos.life/api/v2/img/baka')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`B-Baka! 😶`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+      if (message.content.startsWith(`${prefix}blowjobgif`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/bj')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Blowjob 😮 🍆`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  if (message.content.startsWith(`${prefix}blowjob`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/blowjob')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Blowjob 😮 🍆`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+    if (message.content.startsWith(`${prefix}boobs`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/boobs')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Anime Boobies 😫`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+      if (message.content.startsWith(`${prefix}sex`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/classic')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Classic Sex~! 😀`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+    if (message.content.startsWith(`${prefix}cuddle`)) {
+    let args = message.content.slice(1).split(" ");
+    let cuddleUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!cuddleUser) message.channel.send("You can't cuddle with me! *Even if I might need some cuddles about now...*")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/cuddle`);
 
+  let cuddleEmbed = new Discord.RichEmbed()
+  .setTitle(`Cuddles! 😌`)
+  .setDescription(`<@${message.author.id}> cuddled <@${message.mentions.users.first().id}>!`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(cuddleEmbed)
+
+}
+      if (message.content.startsWith(`${prefix}cum`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/cum')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`*cums* 💦💦💦`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+      if (message.content.startsWith(`${prefix}ero`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/ero')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Erotic Tease 😉`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+        if (message.content.startsWith(`${prefix}erokemo1`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/erokemo')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Erotic Kemonomimi (Neko) Tease 😉`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+      if (message.content.startsWith(`${prefix}erokemo2`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/erok')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Erotic Kemonomimi(Neko) Tease 😉`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+ if (message.content.startsWith(`${prefix}eroyuri`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/eroyuri')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Erotic Yuri 😉`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+    if (message.content.startsWith(`${prefix}feed`)) {
+    let args = message.content.slice(1).split(" ");
+  let feedUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!feedUser) message.channel.send("You can't feed me! I have to keep my thin figure!")
+  const { body } = await superagent
+      superagent.get('https://nekos.life/api/v2/img/feed')
+        
+            let feedembed = new Discord.RichEmbed()
+                .setTitle(`Feeding Time! 🍽`)
+               .setDescription(`<@${message.author.id}> feed <@${message.mentions.users.first().id}>!`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                 .setTimestamp();
+            message.channel.send(feedembed);
+        
+}
+   if (message.content.startsWith(`${prefix}feet`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+  superagent.get('https://nekos.life/api/v2/img/feet')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Feet 🐾`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                 .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+   if (message.content.startsWith(`${prefix}footjob`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+    superagent.get('https://nekos.life/api/v2/img/feetg')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Footjob 🤞`)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                 .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+   if (message.content.startsWith(`${prefix}femdom`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+    superagent.get('https://nekos.life/api/v2/img/femdom')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Female Domination 🎗`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                 .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+            if (message.content.startsWith(`${prefix}foxgirl`)) {
+              superagent.get('https://nekos.life/api/v2/img/fox_girl')
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Fox Girl 💗`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+}
+  
+   if (message.content.startsWith(`${prefix}futa`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+    superagent.get('https://nekos.life/api/v2/img/futanari')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Futanari 👀`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+    if (message.content.startsWith(`${prefix}donate`)) {
+      superagent.get('https://nekos.life/api/v2/img/gecg')
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Every Dollar Spent... 😭`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+}
+      if (message.content.startsWith(`${prefix}help`)) {
+  let helpEmbed = new Discord.RichEmbed()
+.setTitle("😩 NSFW/SFW Command Menu 👌")
+.setColor("#b70000") 
+.addField("🙂 SJW Comamnds", "8ball, avatar, baka, botinfo, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, nekogif, pat, poke, serverinfo, slap, smug, tickle, userinfo, waifu, wallpaper." )
+.addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, ero, erokemo, erokemo2, eroyuri, feet, footjob, femdom, foxgirl, futa(futanari), hentai, hentaigif, hentaigirl, hololewd, kemo, lewdkemo, lewdnekogif, nsfwavatar, orgasm, pussy, randomlewd, randomhentai, smallboobs, sologirl, sologif, spank, tickle, tits, yuri.");
+message.channel.send(helpEmbed);
+
+}
+  
+   if (message.content.startsWith(`${prefix}hentaigif`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+    superagent.get('https://nekos.life/api/v2/img/Random_hentai_gif')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Hentai Gif 😳`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+   if (message.content.startsWith(`${prefix}hentai`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+    superagent.get('https://nekos.life/api/v2/img/hentai')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Hentai 🍑`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+   if (message.content.startsWith(`${prefix}eroticholo`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+    superagent.get('https://nekos.life/api/v2/img/holo')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Holo Erotic 😗`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+   if (message.content.startsWith(`${prefix}kemo`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+    superagent.get('https://nekos.life/api/v2/img/hololewd')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Holo N-Neko! 😩`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+            
+  if (message.content.startsWith(`${prefix}hug`)) {
+    let args = message.content.slice(1).split(" ");
+  let hugUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!hugUser) message.channel.send("You can't hug me! I get nervous when h-hugged, I m-might just start licking you. 😳")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/hug`);
+
+  let hugEmbed = new Discord.RichEmbed()
+  .setTitle(`Hug Time! 🤗`)
+  .setDescription(`<@${message.author.id}> hugged <@${message.mentions.users.first().id}>!`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(hugEmbed)
+
+}
+   if (message.content.startsWith(`${prefix}kemo`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+    superagent.get('https://nekos.life/api/v2/img/kemonomimi')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Kemonomimi! 😼`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+
+
+          
   if (message.content.startsWith(`${prefix}kiss`)) {
     let args = message.content.slice(1).split(" ");
   let kissUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
@@ -47,6 +413,444 @@ client.on('message', async (message) => {
   message.channel.send(kissEmbed);
 
 }
+   if (message.content.startsWith(`${prefix}pussylick`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+    superagent.get('https://nekos.life/api/v2/img/kuni')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Pussy Licking 👅`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+   if (message.content.startsWith(`${prefix}hentaigirl`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+    superagent.get('https://nekos.life/api/v2/img/les')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`A-Ah! 🍑💦`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+   if (message.content.startsWith(`${prefix}lewdkemo`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+    superagent.get('https://nekos.life/api/v2/img/lewdkemo')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`L-Lewd Kemonomimi! 😼`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+     if (message.content.startsWith(`${prefix}lizard`)) {
+      superagent.get('https://nekos.life/api/v2/img/lizard')
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`Lizard 🦎`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(sfwembed);
+}
+          
+     if (message.content.startsWith(`${prefix}meow`)) {
+              superagent.get('https://nekos.life/api/v2/img/meow')
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`Meow! 😺`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(sfwembed);
+}
+     if (message.content.startsWith(`${prefix}neko`)) {
+      superagent.get('https://nekos.life/api/v2/img/neko')
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`Neko 🐱`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(sfwembed);
+}
+       if (message.content.startsWith(`${prefix}nekogif`)) {
+      superagent.get('https://nekos.life/api/v2/img/ngif')
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`Neko Gif 😸`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(sfwembed);
+}
+  
+   if (message.content.startsWith(`${prefix}lewdnekogif`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+    superagent.get('https://nekos.life/api/v2/img/nsfw_neko_gif')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Lewd Neko Gif 😻`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+   if (message.content.startsWith(`${prefix}nsfwavatar`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+    superagent.get('https://nekos.life/api/v2/img/nsfw_avatar')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Lewd Avatar! 😱`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+   if (message.content.startsWith(`${prefix}lewdmoji`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+    superagent.get('https://nekos.life/api/v2/img/gasm')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Lewd Emoji 😈`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+    if (message.content.startsWith(`${prefix}pat`)) {
+    let args = message.content.slice(1).split(" ");
+    let patUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!patUser) message.channel.send("You can't pat me! I'm not a loli.")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/pat`);
+
+  let patEmbed = new Discord.RichEmbed()
+  .setTitle(`Pat pat! 😊`)
+  .setDescription(`<@${message.author.id}> patted <@${message.mentions.users.first().id}>!`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(patEmbed)
+
+}
+      if (message.content.startsWith(`${prefix}poke`)) {
+    let args = message.content.slice(1).split(" ");
+    let pokeUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!pokeUser) message.channel.send("You can't poke me! I only poke, *boops you*.")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/poke`);
+
+  let pokeEmbed = new Discord.RichEmbed()
+  .setTitle(`Boop! 😜`)
+  .setDescription(`<@${message.author.id}> poked <@${message.mentions.users.first().id}>!`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(pokeEmbed)
+
+}
+   if (message.content.startsWith(`${prefix}pussy`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔"); 
+    superagent.get('https://nekos.life/api/v2/img/pussy')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Anime Pussy 😫`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+   if (message.content.startsWith(`${prefix}randomhentai`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/pwankg')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`RANDOM`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+   }
+  
+        if (message.content.startsWith(`${prefix}slap`)) {
+    let args = message.content.slice(1).split(" ");
+    let slapUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!slapUser) message.channel.send("SERIUOSLY?! TRYING TO HIT THE WAIFU-BOT OF THE SERVER?! **SLAPS**!")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/slap`);
+
+  let slapEmbed = new Discord.RichEmbed()
+  .setTitle(`Wack! 🖐`)
+  .setDescription(`<@${message.author.id}> slapped <@${message.mentions.users.first().id}>!`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(pokeEmbed)
+
+}
+  
+   if (message.content.startsWith(`${prefix}smallboobs`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/smallboobs')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`**"FBI, OPEN UP!"** 🏃`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+       if (message.content.startsWith(`${prefix}smug`)) {
+      superagent.get('https://nekos.life/api/v2/img/smug')
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`SMUG 😏`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(sfwembed);
+}
+  
+   if (message.content.startsWith(`${prefix}sologirl`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/solo')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`🍑`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+   if (message.content.startsWith(`${prefix}sologif`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/solog')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`💦`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+  if (message.content.startsWith(`${prefix}spank`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+       let args = message.content.slice(1).split(" ");
+  let spankUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!spankUser) message.channel.send("You can't s-spank me! You pervert!")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/spank`);
+
+  let spankEmbed = new Discord.RichEmbed()
+  .setTitle(`O-Oh my gosh! 😵`)
+  .setDescription(`<@${message.author.id}> spanked <@${message.mentions.users.first().id}>`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(spankEmbed)
+
+}
+          if (message.content.startsWith(`${prefix}tickle`)) {
+    let args = message.content.slice(1).split(" ");
+  let tickleUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!tickleUser) message.channel.send("You can't tickle me! I'm not even ticklish anyways.").catch(err => console.log(err));
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/tickle`);
+
+  let pokeEmbed = new Discord.RichEmbed()
+  .setTitle(`Ticklish Tummy! 🤣`)
+  .setDescription(`<@${message.author.id}> tickled <@${message.mentions.users.first().id}>`)
+  .setImage(body.url)
+  .setColor("#FFFFFF")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp();
+  message.channel.send(pokeEmbed)
+}
+     if (message.content.startsWith(`${prefix}tits`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/tits')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Anime Titties 😫`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+  
+     if (message.content.startsWith(`${prefix}trap`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/trap')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Trap 🍆`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
+}
+       if (message.content.startsWith(`${prefix}waifu`)) {
+      superagent.get('https://nekos.life/api/v2/img/waifu')
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`And you get a waifu!`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+            message.channel.send(sfwembed);
+}
+       if (message.content.startsWith(`${prefix}wallpaper`)) {
+      superagent.get('https://nekos.life/api/v2/img/wallpaper')
+
+            const sfwembed = new Discord.RichEmbed()
+                .setTitle(`Wallpaper 😎`)
+                .setImage(body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+            message.channel.send(sfwembed);
+}
+     if (message.content.startsWith(`${prefix}yuri`)) {
+      if (!message.channel.nsfw) 
+        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+    superagent.get('https://nekos.life/api/v2/img/yuri')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Yuri 💋`)
+                .setImage(response.body.url)
+                .setColor("#FFFFFF")
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+            message.channel.send(lewdembed);
+        })
+     }
+	
+	if (message.content.startsWith(`${prefix}userinfo`)) {
+
+ let member = message.mentions.users.first() || message.author
+            let player = message.mentions.members.first() || message.member
+            let user = message.mentions.users.first();
+            let iicon = player.user.displayAvatarURL;
+            let roles = message.mentions.members.first().roles.map(role => role).join(" ");
+        if(!user) return message.channel.send("You haven't selected/mentioned a user whose info you want to see.");
+            let userEmbed = new Discord.RichEmbed()
+            .setAuthor(`${user.username}'s Info`, user.displayAvatarURL)
+            .setThumbnail(user.displayAvatarURL)
+            .setColor('#b70000')
+            .addField('User ID', user.id, true)
+            .addField('Current Tag', user.tag, true)
+            .addField('Server Nickname', `${player.displayName}`, true) 
+            .addField('Highest Member Role', `${player.highestRole.name}`, true)
+            .addField('Roles', `${roles}`)
+            .addField('Game/Playing', `${(user.presence.game && user.presence.game && user.presence.game.name) || 'None'}`, true)
+            .addField('Status', user.presence.status, true)
+            .addField('Bot', user.bot, true)
+            .addField('Joined At:', `${player.joinedAt}`)
+            .addField('Created At:', `${player.user.createdAt}`)
+            .setThumbnail(iicon)
+            .setTimestamp();
+            message.channel.send(userEmbed)
+	}
+	
+	if (message.content.startsWith(`${prefix}botinfo`)) {
+
+    let bicon = client.user.displayAvatarURL;
+    let botembed = new Discord.RichEmbed()
+    .setTitle("Bot Information")
+    .setColor("#b70000")
+    .setThumbnail(bicon)
+    .addField("Bot Name", client.user.username)
+    .addField("Bot Tag", client.user.tag)
+    .addField("Date Of Creation", client.user.createdAt.toLocaleString())
+    .addField("Guilds", client.guilds.size)
+    .addField("Users", client.users.size)
+    .setTimestamp();
+    return message.channel.send(botembed);
+  }
+  
+	if (message.content.startsWith(`${prefix}serverinfo`)) {
+		
+    let sicon = message.guild.iconURL;
+    let server = message.guild.name;
+    let serverembed = new Discord.RichEmbed()
+    .setTitle("Server Information")
+    .setDescription(`Infomration on ${server}:`)
+    .setThumbnail() 
+    .setColor("#b70000")
+    .addField('Guild ID', message.guild.id, true)
+    .addField('Guild Name', message.guild.name, true)
+    .addField('Guild Channel Total', message.guild.channels.size, true)
+    .addField('Guild Member Total', message.guild.memberCount, true)
+    .addField('Guild Role Total', message.guild.roles.size, true)
+    .addField('Guild Region', message.guild.region, true)
+    .addField('Date Of Server Creation', message.guild.createdAt.toLocaleDateString(), true)
+    .addField('Guild Owner', message.guild.owner, true)
+    .setThumbnail(sicon) 
+    .setTimestamp();
+    message.channel.send(serverembed);
+  }
+  
+  	  if (message.content.startsWith(`${prefix}useravatar`)) { 
+	   let user = message.mentions.users.first(); 
+if(!user) return message.channel.send("You haven't selected/mentioned a user whose avatar you want to see."); 
+    let avatarEmbed = new Discord.RichEmbed()
+    .setAuthor(`${user.username}'s Profile Picture`)
+    .setImage(user.displayAvatarURL)
+    .setColor("#b70000")
+    .setTimestamp();
+    message.channel.send(avatarEmbed);
+}
+
 
 });
 client.login(process.env.BOT_TOKEN); 
