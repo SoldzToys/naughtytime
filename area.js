@@ -14,6 +14,18 @@ const { prefix, token } = require('./botconfig.json');
 client.on('message', async (message) => {
  const superagent = require("snekfetch");
  const Discord = require('discord.js');
+  
+      if (!message.channel.nsfw) return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔")
+    superagent.get('https://nekos.life/api/v2/img/anal')
+        .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+                .setTitle(`Hentai Anal 💩`)
+                .setImage(response.body.url)
+                .setColor(`#FFFFFF`)
+                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+                .setTimestamp();
+            message.channel.send(lewdembed);
+        })
 
   if (message.content.startsWith(`${prefix}kiss`)) {
     let args = message.content.slice(1).split(" ");
@@ -26,12 +38,12 @@ client.on('message', async (message) => {
   .setTitle(`Mwah! 😘`)
   .setDescription(`<@${message.author.id}> kissed <@${message.mentions.users.first().id}>!`)
   .setImage(body.url)
-  .setColor("#b70000")
+  .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
-  .setTimestamp(new Date());
+  .setTimestamp();
   message.channel.send(kissEmbed);
 
 }
 
 });
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN); 
