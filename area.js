@@ -299,8 +299,8 @@ client.on('message', async (message) => {
   let helpEmbed = new Discord.RichEmbed()
 .setTitle("😩 NSFW/SFW Command Menu 👌")
 .setColor("#b70000") 
-.addField("🙂 SJW Comamnds", "8ball, avatar, baka, botinfo, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, nekogif, pat, poke, serverinfo, slap, smug, tickle, userinfo, waifu, wallpaper." )
-.addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, ero, erokemo, erokemo2, eroyuri, feet, footjob, femdom, foxgirl, futa(futanari), hentai, hentaigif, hentaigirl, hololewd, kemo, lewdkemo, lewdnekogif, nsfwavatar, orgasm, pussy, randomlewd, randomhentai, smallboobs, sologirl, sologif, spank, tickle, tits, yuri.");
+.addField("🙂 SJW Comamnds", "avatar, baka, botinfo, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, nekogif, pat, poke, serverinfo, slap, smug, tickle, useravatar, userinfo, waifu, wallpaper." )
+.addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, ero, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, foxgirl, futa(futanari), hentai, hentaigif, hentaigirl, hololewd, kemo, lewdkemo, lewdnekogif, nsfwavatar, orgasm, pussy, randomhentai, smallboobs, sologirl, sologif, spank, tickle, tits, yuri.");
 message.channel.send(helpEmbed);
 
 }
