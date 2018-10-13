@@ -11,7 +11,7 @@ const { prefix, token } = require('./botconfig.json');
 });
 
   
-client.on('message', async (client, message, args, level) => {
+client.on('message', async (client, message) => {
  const superagent = require("snekfetch");
  const Discord = require('discord.js');
 
