@@ -16,6 +16,7 @@ client.on('message', async (message) => {
  const Discord = require('discord.js');
 
   if (message.content.startsWith(`${prefix}kiss`)) {
+    let args = message.content.slice(1).split(" ");
   let kissUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!kissUser) message.channel.send("You can't kiss me! *Even if I might like it...*")
   const { body } = await superagent
