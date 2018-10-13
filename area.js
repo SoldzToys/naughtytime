@@ -7,7 +7,7 @@ const { prefix, token } = require('./botconfig.json');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is online!`);
-  client.user.setActivity("h!kisshentai");
+  client.user.setActivity("b!kisshentai");
 });
 
   
