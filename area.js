@@ -28,6 +28,7 @@ client.on('message', async (message) => {
                 .setTimestamp();
             message.channel.send(lewdembed);
         })
+    }
 
   if (message.content.startsWith(`${prefix}kiss`)) {
     let args = message.content.slice(1).split(" ");
