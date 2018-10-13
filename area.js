@@ -15,6 +15,7 @@ client.on('message', async (message) => {
  const superagent = require("snekfetch");
  const Discord = require('discord.js');
   
+    if (message.content.startsWith(`${prefix}anal`)) {
       if (!message.channel.nsfw)
       return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS!⛔");
     superagent.get('https://nekos.life/api/v2/img/anal')
