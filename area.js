@@ -27,5 +27,5 @@ client.on('message', async (client, message, args, level) => {
         })
 }
 
-
+});
 client.login(process.env.BOT_TOKEN);
