@@ -10,21 +10,26 @@ const { prefix, token } = require('./botconfig.json');
   client.user.setActivity("h!kisshentai");
 });
 
+  
 client.on('message', async (client, message, args, level) => {
  const superagent = require("snekfetch");
  const Discord = require('discord.js');
-if (message.content.startsWith(`${prefix}anal`)) {
-    if (!message.channel.nsfw) return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔")
-    superagent.get('https://nekos.life/api/v2/img/anal')
-        .end((err, response) => {
-            const lewdembed = new Discord.RichEmbed()
-                .setTitle(`Hentai Anal 💩`)
-                .setImage(response.body.url)
-                .setColor(`#b70000`)
-                .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
-                .setTimestamp(new Date());
-            message.channel.send(lewdembed);
-        })
+
+  if (message.content.startsWith(`${prefix}kiss`)) {
+  let kissUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!kissUser) message.channel.send("You can't kiss me! *Even if I might like it...*")
+  const { body } = await superagent
+  .get(`https://nekos.life/api/v2/img/kiss`);
+
+  let kissEmbed = new Discord.RichEmbed()
+  .setTitle(`Mwah! 😘`)
+  .setDescription(`<@${message.author.id}> kissed <@${message.mentions.users.first().id}>!`)
+  .setImage(body.url)
+  .setColor("#b70000")
+  .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+  .setTimestamp(new Date());
+  message.channel.send(kissEmbed);
+
 }
 
 });
