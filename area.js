@@ -796,7 +796,7 @@ message.channel.send(helpEmbed);
             .addField('Status', user.presence.status, true)
             .addField('Bot', user.bot, true)
             .addField('Joined At:', `${player.joinedAt}`)
-            .addField('Created At:', `${player.user.createdAt}`)
+            .addField('Account Created:', `${player.user.createdAt}`)
             .setThumbnail(iicon)
             .setTimestamp();
             message.channel.send(userEmbed)
