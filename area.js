@@ -807,6 +807,7 @@ message.channel.send(helpEmbed);
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setTitle("Bot Information")
+    .setDescription(`Infomration on LewdTime:`)
     .setColor("#b70000")
     .setThumbnail(bicon)
     .addField("Bot Name", client.user.username)
