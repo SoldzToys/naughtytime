@@ -850,8 +850,37 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setColor("#b70000")
     .setTimestamp();
     message.channel.send(avatarEmbed);
-}
+});
+	
+	client.on('guildCreate', guild => {
+  let channel = client.channels.get("499832353544470539");
 
+  const embed = new Discord.RichEmbed()
+      .setColor("#FF8C00")
+      .setAuthor(`Joined ${guild.name}`)
+      .setThumbnail(guild.iconURL)
+      .addField("Owner", guild.owner.user.tag)
+      .addField("ID", guild.id, true)
+      .addField("Users", guild.memberCount, true)
+      .addField("Channels", guild.channels.size, true)
+  return channel.send(embed);
+});
+
+
+
+client.on('guildDelete', guild => {
+  let channel = client.channels.get("499832353544470539");
+
+  const embed = new Discord.RichEmbed()
+      .setColor("#FF8C00")
+      .setAuthor(`Left ${guild.name}`)
+      .setThumbnail(guild.iconURL)
+      .addField("Owner", guild.owner.user.tag)
+      .addField("ID", guild.id, true)
+      .addField("Users", guild.memberCount, true)
+      .addField("Channels", guild.channels.size, true)
+  return channel.send(embed);
+});
 
 });
 client.login(process.env.BOT_TOKEN); 
