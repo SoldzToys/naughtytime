@@ -857,7 +857,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
   let channel = client.channels.get("499832353544470539");
 
   const embed = new Discord.RichEmbed()
-      .setColor("#FF8C00")
+      .setColor("#b70000")
       .setAuthor(`Joined ${guild.name}`)
       .setThumbnail(guild.iconURL)
       .addField("Owner", guild.owner.user.tag)
@@ -873,7 +873,7 @@ client.on('guildDelete', guild => {
   let channel = client.channels.get("499832353544470539");
 
   const embed = new Discord.RichEmbed()
-      .setColor("#FF8C00")
+      .setColor("#b70000")
       .setAuthor(`Left ${guild.name}`)
       .setThumbnail(guild.iconURL)
       .addField("Owner", guild.owner.user.tag)
