@@ -850,6 +850,7 @@ if(!user) return message.channel.send("You haven't selected/mentioned a user who
     .setColor("#b70000")
     .setTimestamp();
     message.channel.send(avatarEmbed);
+	  }
 });
 	
 	client.on('guildCreate', guild => {
@@ -882,5 +883,4 @@ client.on('guildDelete', guild => {
   return channel.send(embed);
 });
 
-});
 client.login(process.env.BOT_TOKEN); 
