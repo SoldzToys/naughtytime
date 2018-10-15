@@ -7,7 +7,7 @@ const { prefix, token } = require('./botconfig.json');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is online!`);
-  client.user.setActivity("b!kisshentai");
+  client.user.setActivity("b!kisshentai (b!help)");
 });
 
   
@@ -298,6 +298,7 @@ client.on('message', async (message) => {
       if (message.content.startsWith(`${prefix}help`)) {
   let helpEmbed = new Discord.RichEmbed()
 .setTitle("😩 NSFW/SFW Command Menu 👌")
+.setDescription(`These are the comamnds for this bot, ones with the label SJW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels.`)
 .setColor("#b70000") 
 .addField("🙂 SJW Comamnds", "avatar, baka, botinfo, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, nekogif, pat, poke, serverinfo, slap, smug, tickle, useravatar, userinfo, waifu, wallpaper." )
 .addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, ero, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, foxgirl, futa(futanari), hentai, hentaigif, hentaigirl, hololewd, kemo, lewdkemo, lewdnekogif, nsfwavatar, orgasm, pussy, randomhentai, smallboobs, sologirl, sologif, spank, tickle, tits, yuri.");
