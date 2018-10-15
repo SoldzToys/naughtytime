@@ -305,7 +305,7 @@ client.on('message', async (message) => {
 .setColor("#b70000") 
 .addField("❔Information Commands", "botinfo, serverinfo, useravatar, userinfo.")
 .addField("📘 Fun SJW Comamnds", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, ngif, pat, poke, slap, smug, tickle, waifu, wallpaper.")
-.addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, hololewd, kemo, lewdkemo, lewdnekogif, lewdmojis nsfwavatar, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.");
+.addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, holoneko, kemo, lewdkemo, lewdnekogif, lewdmoji nsfwavatar, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.");
 message.channel.send(helpEmbed);
 
 }
@@ -584,13 +584,13 @@ message.channel.send(helpEmbed);
   message.channel.send(pokeEmbed)
 
 }
-   if (message.content.startsWith(`${prefix}pussy`)) {
+   if (message.content.startsWith(`${prefix}clit`)) {
       if (!message.channel.nsfw) 
         return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔"); 
     superagent.get('https://nekos.life/api/v2/img/pussy')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
-                .setTitle(`Anime Pussy 😫`)
+                .setTitle(`Anime Clit 😫`)
                 .setImage(response.body.url)
                 .setColor("#FFFFFF")
                 .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
