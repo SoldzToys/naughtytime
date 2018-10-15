@@ -303,7 +303,7 @@ client.on('message', async (message) => {
 .setTitle("😩 NSFW/SFW Command Menu 👌")
 .setDescription(`These are the comamnds for this bot, ones with the label SJW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels. Also if you have never used bots like **Senpai**, **Miki** or **Naughty Time~**, when using most of the fun commands you must mention a user to use the command. Example: https://imgur.com/a/FeAsJzO`)
 .setColor("#b70000") 
-.addField("❔Information Commands", "botinfo, serverinfo, useravatar, userinfo.")
+.addField("❔Information Commands", "botinfo, serverinfo, useravatar, whois.")
 .addField("📘 Fun SJW Comamnds", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, ngif, pat, poke, slap, smug, tickle, waifu, wallpaper.")
 .addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, holoneko, kemo, lewdkemo, lewdnekogif, lewdmoji nsfwavatar, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.");
 message.channel.send(helpEmbed);
@@ -790,7 +790,7 @@ message.channel.send(helpEmbed);
         })
      }
 	
-	if (message.content.startsWith(`${prefix}userinfo`)) {
+	if (message.content.startsWith(`${prefix}whois`)) {
 
  let member = message.mentions.users.first() || message.author
             let player = message.mentions.members.first() || message.member
