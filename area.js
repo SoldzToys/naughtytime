@@ -305,7 +305,7 @@ client.on('message', async (message) => {
 .setColor("#b70000") 
 .addField("❔Information Commands", "botinfo, serverinfo, useravatar, userinfo.")
 .addField("📘 Fun SJW Comamnds", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, ngif, pat, poke, slap, smug, tickle, waifu, wallpaper.")
-.addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, hololewd, kemo, lewdkemo, lewdnekogif, lewdmojis nsfwavatar, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, tits, trap, yuri.");
+.addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, hololewd, kemo, lewdkemo, lewdnekogif, lewdmojis nsfwavatar, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.");
 message.channel.send(helpEmbed);
 
 }
