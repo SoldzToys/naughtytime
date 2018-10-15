@@ -119,7 +119,7 @@ client.on('message', async (message) => {
 
   let cuddleEmbed = new Discord.RichEmbed()
   .setTitle(`Cuddles! 😌`)
-  .setDescription(`<@${message.author.id}> cuddled <@${message.mentions.users.first().id}>!`)
+  .setDescription(`<@${message.author.id}> cuddled ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -209,7 +209,7 @@ client.on('message', async (message) => {
         
             let feedembed = new Discord.RichEmbed()
                 .setTitle(`Feeding Time! 🍽`)
-               .setDescription(`<@${message.author.id}> feed <@${message.mentions.users.first().id}>!`)
+               .setDescription(`<@${message.author.id}> feed ${message.mentions.users.first()}!`)
                 .setImage(body.url)
                 .setColor("#FFFFFF")
                 .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -410,7 +410,7 @@ message.channel.send(helpEmbed);
 
   let kissEmbed = new Discord.RichEmbed()
   .setTitle(`Mwah! 😘`)
-  .setDescription(`<@${message.author.id}> kissed <@${message.mentions.users.first().id}>!`)
+  .setDescription(`<@${message.author.id}> kissed ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -561,7 +561,7 @@ message.channel.send(helpEmbed);
 
   let patEmbed = new Discord.RichEmbed()
   .setTitle(`Pat pat! 😊`)
-  .setDescription(`<@${message.author.id}> patted <@${message.mentions.users.first().id}>!`)
+  .setDescription(`<@${message.author.id}> patted ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -578,7 +578,7 @@ message.channel.send(helpEmbed);
 
   let pokeEmbed = new Discord.RichEmbed()
   .setTitle(`Boop! 😜`)
-  .setDescription(`<@${message.author.id}> poked <@${message.mentions.users.first().id}>!`)
+  .setDescription(`<@${message.author.id}> poked ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -625,7 +625,7 @@ message.channel.send(helpEmbed);
 
   let slapEmbed = new Discord.RichEmbed()
   .setTitle(`Wack! 🖐`)
-  .setDescription(`<@${message.author.id}> slapped <@${message.mentions.users.first().id}>!`)
+  .setDescription(`<@${message.author.id}> slapped ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -701,7 +701,7 @@ message.channel.send(helpEmbed);
 
   let spankEmbed = new Discord.RichEmbed()
   .setTitle(`O-Oh my gosh! 😵`)
-  .setDescription(`<@${message.author.id}> spanked <@${message.mentions.users.first().id}>`)
+  .setDescription(`<@${message.author.id}> spanked ${message.mentions.users.first()}`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -718,7 +718,7 @@ message.channel.send(helpEmbed);
 
   let pokeEmbed = new Discord.RichEmbed()
   .setTitle(`Ticklish Tummy! 🤣`)
-  .setDescription(`<@${message.author.id}> tickled <@${message.mentions.users.first().id}>`)
+  .setDescription(`<@${message.author.id}> tickled ${message.mentions.users.first()}`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
