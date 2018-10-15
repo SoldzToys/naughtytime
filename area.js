@@ -822,14 +822,15 @@ message.channel.send(helpEmbed);
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setTitle("Bot Information")
-    .setDescription(`Infomration on LewdTime:`)
+    .setDescription(`Information on LewdTime:`)
     .setColor("#b70000")
     .setThumbnail(bicon)
-    .addField("Bot Name", client.user.username)
-    .addField("Bot Tag", client.user.tag)
+    .addField("Bot Name", client.user.username, true)
+    .addField("Bot Tag", client.user.tag, true)
     .addField("Date Of Creation", client.user.createdAt.toLocaleString())
-    .addField("Guilds", client.guilds.size)
-    .addField("Users", client.users.size)
+    .addField("Guilds", client.guilds.size, true)
+    .addField("Users", client.users.size, true)
+    .addField("Invite Me To Your Server", "https://bit.ly/2AbmU0S", true)
     .setTimestamp();
     return message.channel.send(botembed);
   }
@@ -840,7 +841,7 @@ message.channel.send(helpEmbed);
     let server = message.guild.name;
     let serverembed = new Discord.RichEmbed()
     .setTitle("Server Information")
-    .setDescription(`Infomration on ${server}:`)
+    .setDescription(`Information on ${server}:`)
     .setThumbnail() 
     .setColor("#b70000")
     .addField('Guild ID', message.guild.id, true)
