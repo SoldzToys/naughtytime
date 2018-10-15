@@ -376,7 +376,7 @@ message.channel.send(helpEmbed);
 
   let hugEmbed = new Discord.RichEmbed()
   .setTitle(`Hug Time! 🤗`)
-  .setDescription(`<@${message.author.id}> hugged <@${message.mentions.users.first()}!`)
+  .setDescription(`<@${message.author.id}> hugged ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
