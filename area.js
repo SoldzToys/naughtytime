@@ -753,13 +753,14 @@ message.channel.send(helpEmbed);
         })
 }
        if (message.content.startsWith(`${prefix}waifu`)) {
-	       	        const { body } = await superagent
+	      const { body } = await superagent
         .get('https://nekos.life/api/v2/img/waifu')
             const sfwembed = new Discord.RichEmbed()
                 .setTitle(`And you get a waifu!`)
                 .setImage(body.url)
                 .setColor("#FFFFFF")
                 .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+	        .setTimestamp();
             message.channel.send(sfwembed);
 }
        if (message.content.startsWith(`${prefix}wallpaper`)) {
@@ -771,6 +772,7 @@ message.channel.send(helpEmbed);
                 .setImage(body.url)
                 .setColor("#FFFFFF")
                 .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+	        .setTimestamp();
             message.channel.send(sfwembed);
 }
      if (message.content.startsWith(`${prefix}yuri`)) {
@@ -783,6 +785,7 @@ message.channel.send(helpEmbed);
                 .setImage(response.body.url)
                 .setColor("#FFFFFF")
                 .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
+	        .setTimestamp();
             message.channel.send(lewdembed);
         })
      }
