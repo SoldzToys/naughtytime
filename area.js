@@ -288,9 +288,9 @@ client.on('message', async (message) => {
         })
 }
     if (message.content.startsWith(`${prefix}donate`)) {
-      superagent.get('https://nekos.life/api/v2/img/gecg')
+	        const { body } = await superagent
+        .get('https://nekos.life/api/v2/img/gecg')
             const lewdembed = new Discord.RichEmbed()
-	      const { body } = await superagent
                 .setTitle(`Every Dollar Spent... 😭`)
                 .setImage(body.url)
                 .setColor("#FFFFFF")
@@ -301,10 +301,10 @@ client.on('message', async (message) => {
       if (message.content.startsWith(`${prefix}help`)) {
   let helpEmbed = new Discord.RichEmbed()
 .setTitle("😩 NSFW/SFW Command Menu 👌")
-.setDescription(`These are the comamnds for this bot, ones with the label SJW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels.`)
+.setDescription(`These are the comamnds for this bot, ones with the label SJW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels. Also if you have never used bots like **Senpai**, **Miki** or **Naughty Time~**, when using most of the fun commands you must mention a user to use the command. Example: https://imgur.com/a/FeAsJzO`)
 .setColor("#b70000") 
-.addField("❔Information Commands", "botifo, serverinfo, useravatar, userinfo.")
-.addField("📘 Fun SJW Comamnds", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, nekogif, pat, poke, slap, smug, tickle, waifu, wallpaper." )
+.addField("❔Information Commands", "botinfo, serverinfo, useravatar, userinfo.")
+.addField("📘 Fun SJW Comamnds", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, ngif, pat, poke, slap, smug, tickle, waifu, wallpaper.")
 .addField("🔞 NSFW Commands", "anal, blowjobgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, hololewd, kemo, lewdkemo, lewdnekogif, lewdmojis nsfwavatar, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, tits, yuri.");
 message.channel.send(helpEmbed);
 
@@ -494,7 +494,7 @@ message.channel.send(helpEmbed);
                 .setTimestamp();
             message.channel.send(sfwembed);
 }
-       if (message.content.startsWith(`${prefix}nekogif`)) {
+       if (message.content.startsWith(`${prefix}ngif`)) {
 	     const { body } = await superagent
          .get('https://nekos.life/api/v2/img/ngif')
             const sfwembed = new Discord.RichEmbed()
