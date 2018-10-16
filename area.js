@@ -203,13 +203,13 @@ client.on('message', async (message) => {
     if (message.content.startsWith(`${prefix}feed`)) {
     let args = message.content.slice(1).split(" ");
   let feedUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!feedUser) message.channel.send("You can't feed me! I have to keep my thin figure!")
+  if(!feedUser) return message.channel.send("You can't feed me! I have to keep my thin figure!")
   const { body } = await superagent
 .get('https://nekos.life/api/v2/img/feed')
         
             let feedembed = new Discord.RichEmbed()
                 .setTitle(`Feeding Time! 🍽`)
-               .setDescription(`<@${message.author.id}> feed <@${message.mentions.users.first().id}>!`)
+               .setDescription(`${message.author} cuddled ${message.mentions.users.first()}!`)
                 .setImage(body.url)
                 .setColor("#FFFFFF")
                 .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -370,13 +370,13 @@ message.channel.send(helpEmbed);
   if (message.content.startsWith(`${prefix}hug`)) {
     let args = message.content.slice(1).split(" ");
   let hugUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!hugUser) message.channel.send("You can't hug me! I get nervous when h-hugged, I m-might just start licking you. 😳")
+  if(!hugUser) return message.channel.send("You can't hug me! I get nervous when h-hugged, I m-might just start licking you. 😳")
   const { body } = await superagent
   .get(`https://nekos.life/api/v2/img/hug`);
 
   let hugEmbed = new Discord.RichEmbed()
   .setTitle(`Hug Time! 🤗`)
-  .setDescription(`<@${message.author.id}> hugged <@${message.mentions.users.first().id}>!!`)
+  .setDescription(`${message.author} hugged ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -404,13 +404,13 @@ message.channel.send(helpEmbed);
   if (message.content.startsWith(`${prefix}kiss`)) {
     let args = message.content.slice(1).split(" ");
   let kissUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!kissUser) message.channel.send("You can't kiss me! *Even if I might like it...*")
+  if(!kissUser) return message.channel.send("You can't kiss me! *Even if I might like it...*")
   const { body } = await superagent
   .get(`https://nekos.life/api/v2/img/kiss`);
 
   let kissEmbed = new Discord.RichEmbed()
   .setTitle(`Mwah! 😘`)
-  .setDescription(`<@${message.author.id}> kissed <@${message.mentions.users.first().id}>!`)
+  .setDescription(`${message.author} kissed ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -555,13 +555,13 @@ message.channel.send(helpEmbed);
     if (message.content.startsWith(`${prefix}pat`)) {
     let args = message.content.slice(1).split(" ");
     let patUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!patUser) message.channel.send("You can't pat me! I'm not a loli.")
+  if(!patUser) return message.channel.send("You can't pat me! I'm not a loli.")
   const { body } = await superagent
   .get(`https://nekos.life/api/v2/img/pat`);
 
   let patEmbed = new Discord.RichEmbed()
   .setTitle(`Pat pat! 😊`)
-  .setDescription(`<@${message.author.id}> patted <@${message.mentions.users.first().id}>!!`)
+.setDescription(`${message.author} patted ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -578,7 +578,7 @@ message.channel.send(helpEmbed);
 
   let pokeEmbed = new Discord.RichEmbed()
   .setTitle(`Boop! 😜`)
-  .setDescription(`<@${message.author.id}> poked <@${message.mentions.users.first().id}>!`)
+  .setDescription(`${message.author} poked ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -619,13 +619,13 @@ message.channel.send(helpEmbed);
         if (message.content.startsWith(`${prefix}slap`)) {
     let args = message.content.slice(1).split(" ");
     let slapUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!slapUser) message.channel.send("SERIUOSLY?! TRYING TO HIT THE WAIFU-BOT OF THE SERVER?! **SLAPS**!")
+  if(!slapUser) return message.channel.send("SERIUOSLY?! TRYING TO HIT THE WAIFU-BOT OF THE SERVER?! **SLAPS**!")
   const { body } = await superagent
   .get(`https://nekos.life/api/v2/img/slap`);
 
   let slapEmbed = new Discord.RichEmbed()
   .setTitle(`Wack! 🖐`)
-  .setDescription(`<@${message.author.id}> slapped <@${message.mentions.users.first().id}>!`)
+  .setDescription(`${message.author} slapped ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -701,7 +701,7 @@ message.channel.send(helpEmbed);
 
   let spankEmbed = new Discord.RichEmbed()
   .setTitle(`O-Oh my gosh! 😵`)
-  .setDescription(`<@${message.author.id}> spanked <@${message.mentions.users.first().id}>!`)
+  .setDescription(`${message.author} spanked ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
@@ -712,13 +712,13 @@ message.channel.send(helpEmbed);
           if (message.content.startsWith(`${prefix}tickle`)) {
     let args = message.content.slice(1).split(" ");
   let tickleUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tickleUser) message.channel.send("You can't tickle me! I'm not even ticklish anyways.").catch(err => console.log(err));
+  if(!tickleUser) return message.channel.send("You can't tickle me! I'm not even ticklish anyways.").catch(err => console.log(err));
   const { body } = await superagent
   .get(`https://nekos.life/api/v2/img/tickle`);
 
   let pokeEmbed = new Discord.RichEmbed()
   .setTitle(`Ticklish Tummy! 🤣`)
-  .setDescription(`<@${message.author.id}> tickled <@${message.mentions.users.first().id}>!`)
+.setDescription(`${message.author} tickled ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
