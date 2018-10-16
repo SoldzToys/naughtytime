@@ -834,7 +834,7 @@ message.channel.send(helpEmbed);
     .addField("Date Of Creation", client.user.createdAt.toLocaleString(), true)
     .addField("Guilds", client.guilds.size, true)
     .addField("Users", client.users.size, true)
-    .addField("Invite Me To Your Server", "https://bit.ly/2AbmU0S", true)
+    .addField("Invite Me!~", "https://bit.ly/2AbmU0S", true)
     .setTimestamp();
     return message.channel.send(botembed);
   }
