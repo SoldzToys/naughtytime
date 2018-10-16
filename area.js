@@ -119,7 +119,7 @@ client.on('message', async (message) => {
 
   let cuddleEmbed = new Discord.RichEmbed()
   .setTitle(`Cuddles! 😌`)
-  .setDescription(`<@${message.author.id}> cuddled <@${message.mentions.users.first().id}>!`)
+  .setDescription(`${message.author} cuddled ${message.mentions.users.first()}!`)
   .setImage(body.url)
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
