@@ -3,7 +3,8 @@ const superagent = require("snekfetch");
 const client = new Discord.Client();
 const config = require('./botconfig.json');
 const { prefix, token } = require('./botconfig.json');
-
+const moment = require('moment');
+require('moment-duration-format');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is online!`);
@@ -829,6 +830,7 @@ message.channel.send(helpEmbed);
     .setThumbnail(bicon)
     .addField("Bot Name", client.user.username, true)
     .addField("Bot Tag", client.user.tag, true)
+    .addField("Uptime", moment.duration(client.uptime).format('d[d ]h[h ]m[m ]s[s]'), true)
     .addField("Date Of Creation", client.user.createdAt.toLocaleString(), true)
     .addField("Guilds", client.guilds.size, true)
     .addField("Users", client.users.size, true)
