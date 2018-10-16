@@ -835,7 +835,7 @@ message.channel.send(helpEmbed);
     .addField("Guilds", client.guilds.size, true)
     .addField("Users", client.users.size, true)
     .addField("Invite Me!~", "https://bit.ly/2AbmU0S", true)
-    .setFooter("Created By @Dawn.Bots.INC", "https://i.imgur.com/c9qLizu.png") 
+    .setFooter("Created By @Dawn.Bots.INC", "https://i.imgur.com/WYIX5AN.png") 
     .setTimestamp();
     return message.channel.send(botembed);
   }
