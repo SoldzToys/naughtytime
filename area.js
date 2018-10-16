@@ -124,7 +124,7 @@ client.on('message', async (message) => {
   .setColor("#FFFFFF")
   .setFooter("Bot Version: 1.2.3", client.user.displayAvatarURL)
   .setTimestamp();
-  message.channel.send(cuddleEmbed)
+return  message.channel.send(cuddleEmbed)
 
 }
       if (message.content.startsWith(`${prefix}cum`)) {
