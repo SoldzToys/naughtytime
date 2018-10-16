@@ -113,7 +113,7 @@ client.on('message', async (message) => {
     if (message.content.startsWith(`${prefix}cuddle`)) {
     let args = message.content.slice(1).split(" ");
     let cuddleUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!cuddleUser) message.channel.send("You can't cuddle with me! *Even if I might need some cuddles about now...*")
+  if(!cuddleUser) return message.channel.send("You can't cuddle with me! *Even if I might need some cuddles about now...*")
   const { body } = await superagent
   .get(`https://nekos.life/api/v2/img/cuddle`);
 
