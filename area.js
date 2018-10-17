@@ -304,7 +304,8 @@ client.on('message', async (message) => {
 .setTitle("😩 NSFW/SFW Command Menu 👌")
 .setDescription(`These are the comamnds for this bot, ones with the label SFW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels. Also if you have never used bots like **Senpai**, **Miki** or **Naughty Time~**, when using most of the fun commands you must mention a user to use the command. Example: https://imgur.com/a/FeAsJzO`)
 .setColor("#b70000") 
-.addField("❔Information Commands", "botinfo, serverinfo, useravatar, whois.")
+.addField("❔Information Commands", "botinfo, serverinfo, useravatar, 
+	  .")
 .addField("📘 Fun SFW Commands", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, pat, poke, slap, smug, tickle, waifu, wallpaper.")
 .addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, holoneko, kemo, lewdkemo, lewdnekogif, lewdmoji nsfwavatar, ngif, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.");
 message.channel.send(helpEmbed);
@@ -864,15 +865,16 @@ message.channel.send(helpEmbed);
   }
   
   	  if (message.content.startsWith(`${prefix}useravatar`)) { 
-	   let user = message.mentions.users.first(); 
+      let player = message.mentions.members.first() || message.member
+	   let user = player.user
 if(!user) return message.channel.send("You haven't selected/mentioned a user whose avatar you want to see."); 
     let avatarEmbed = new Discord.RichEmbed()
-    .setAuthor(`${user.username}'s Profile Picture`)
+    .setAuthor(`${user.tag}`, `${user.displayAvatarURL}`)
+    .setTitle('Avatar')
     .setImage(user.displayAvatarURL)
-    .setColor("#b70000")
-    .setTimestamp();
-    message.channel.send(avatarEmbed);
-	  }
+    .setColor("#b70000");
+    return message.channel.send(avatarEmbed);
+}
 });
 	
 	client.on('guildCreate', guild => {
