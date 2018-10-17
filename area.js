@@ -305,7 +305,6 @@ client.on('message', async (message) => {
 .setDescription(`These are the comamnds for this bot, ones with the label SFW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels. Also if you have never used bots like **Senpai**, **Miki** or **Naughty Time~**, when using most of the fun commands you must mention a user to use the command. Example: https://imgur.com/a/FeAsJzO`)
 .setColor("#b70000") 
 .addField("❔Information Commands", "botinfo, serverinfo, useravatar, whois.")
-	  .")
 .addField("📘 Fun SFW Commands", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, pat, poke, slap, smug, tickle, waifu, wallpaper.")
 .addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, holoneko, kemo, lewdkemo, lewdnekogif, lewdmoji nsfwavatar, ngif, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.");
 message.channel.send(helpEmbed);
