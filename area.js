@@ -818,7 +818,7 @@ message.channel.send(helpEmbed);
             .addField('Account Created:', `${player.user.createdAt}`, true)
             .setThumbnail(iicon)
             .setTimestamp();
-            message.channel.send(userEmbed)
+         return message.channel.send(userEmbed)
 	}
 	
 	if (message.content.startsWith(`${prefix}botinfo`)) {
@@ -861,7 +861,7 @@ message.channel.send(helpEmbed);
     .setThumbnail(sicon) 
     .setFooter(`${server}`, sicon)
     .setTimestamp();
-    message.channel.send(serverembed);
+   return message.channel.send(serverembed);
   }
   
   	  if (message.content.startsWith(`${prefix}useravatar`)) { 
@@ -870,11 +870,11 @@ message.channel.send(helpEmbed);
 if(!user) return message.channel.send("You haven't selected/mentioned a user whose avatar you want to see."); 
     let avatarEmbed = new Discord.RichEmbed()
     .setAuthor(`${user.tag}`, `${user.displayAvatarURL}`)
-    .setTitle('Avatar')
+    .setTitle("Avatar")
     .setImage(user.displayAvatarURL)
     .setColor("#b70000");
     return message.channel.send(avatarEmbed);
-}
+     }
 });
 	
 	client.on('guildCreate', guild => {
