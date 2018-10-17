@@ -855,7 +855,7 @@ message.channel.send(helpEmbed);
     .addField('Member Count', message.guild.memberCount, true)
     .addField('Role Count', message.guild.roles.size, true)
     .addField('Region', message.guild.region, true)
-    .addField('Server Created On', message.guild.createdAt.toLocaleDateString(), true)
+    .addField('Server Created On', message.guild.createdAt.toLocaleString(), true)
     .addField('Server Owner', message.guild.owner, true)
     .setThumbnail(sicon) 
     .setFooter(`${server}`, sicon)
