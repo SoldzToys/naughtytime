@@ -858,6 +858,7 @@ message.channel.send(helpEmbed);
     .addField('Date Of Server Creation', message.guild.createdAt.toLocaleDateString(), true)
     .addField('Guild Owner', message.guild.owner, true)
     .setThumbnail(sicon) 
+    .setFooter(`${server}`, sicon)
     .setTimestamp();
     message.channel.send(serverembed);
   }
