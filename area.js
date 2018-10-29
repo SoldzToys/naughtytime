@@ -300,7 +300,7 @@ client.on('message', async (message) => {
             message.channel.send(lewdembed);
 }
       if (message.content.startsWith(`${prefix}help`)) {
-  let helpImage = "https://i.imgur.com/FrxGqHl.png"
+  let helpImage = "https://image.ibb.co/gQgCoL/Py9Skn7.png"
   let helpEmbed = new Discord.RichEmbed()
 .setTitle("😩 NSFW/SFW Command Menu 👌")
 .setDescription(`These are the comamnds for this bot, ones with the label SFW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels. Also if you have never used bots like **Senpai**, **Miki** or **Naughty Time~**, when using most of the fun commands you must mention a user to use the command. Example: https://imgur.com/a/FeAsJzO`)
