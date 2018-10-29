@@ -309,7 +309,7 @@ client.on('message', async (message) => {
 .addField("📘 Fun SFW Commands", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, pat, poke, slap, smug, tickle, waifu, wallpaper.")
 .addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, holoneko, kemo, lewdkemo, lewdnekogif, lewdmoji nsfwavatar, ngif, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.")
 //.setImage("https://i.imgur.com/FrxGqHl.png");
-  .setImage("https://i.imgur.com/FrxGqHl.png")
+  .setImage(helpImage)
    .setFooter("f", `${client.user.displayAvatarURL}`)
     .setTimestamp();
 message.channel.send(helpEmbed);
