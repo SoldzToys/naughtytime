@@ -56,8 +56,8 @@ client.on('message', async (message) => {
         })
 }
       if (message.content.startsWith(`${prefix}bjgif`)) {
-      if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      if (!message.channel.nsfw)        
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/bj')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -71,7 +71,7 @@ client.on('message', async (message) => {
 }
   if (message.content.startsWith(`${prefix}blowjob`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/blowjob')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -85,7 +85,7 @@ client.on('message', async (message) => {
 }
     if (message.content.startsWith(`${prefix}boobs`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/boobs')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -99,7 +99,7 @@ client.on('message', async (message) => {
 }
       if (message.content.startsWith(`${prefix}sex`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/classic')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -130,7 +130,7 @@ client.on('message', async (message) => {
 }
       if (message.content.startsWith(`${prefix}cum`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/cum')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -145,7 +145,7 @@ client.on('message', async (message) => {
   
       if (message.content.startsWith(`${prefix}erotease`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/ero')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -159,7 +159,7 @@ client.on('message', async (message) => {
 }
         if (message.content.startsWith(`${prefix}erokemo1`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/erokemo')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -174,7 +174,7 @@ client.on('message', async (message) => {
   
       if (message.content.startsWith(`${prefix}erokemo2`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/erok')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -189,7 +189,7 @@ client.on('message', async (message) => {
   
  if (message.content.startsWith(`${prefix}eroyuri`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/eroyuri')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -220,7 +220,7 @@ client.on('message', async (message) => {
 }
    if (message.content.startsWith(`${prefix}feet`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
   superagent.get('https://nekos.life/api/v2/img/feet')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -250,7 +250,7 @@ client.on('message', async (message) => {
   
    if (message.content.startsWith(`${prefix}femdom`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");  
     superagent.get('https://nekos.life/api/v2/img/femdom')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -276,7 +276,7 @@ client.on('message', async (message) => {
   
    if (message.content.startsWith(`${prefix}futa`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");   
     superagent.get('https://nekos.life/api/v2/img/futanari')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -315,7 +315,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}hgif`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/Random_hentai_gif')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -329,7 +329,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}hentai`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");    
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/hentai')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -343,7 +343,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}eroticholo`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/holo')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -357,7 +357,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}holoneko`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");  
     superagent.get('https://nekos.life/api/v2/img/hololewd')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -389,7 +389,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}kemo`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");  
     superagent.get('https://nekos.life/api/v2/img/kemonomimi')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -423,7 +423,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}pussylick`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔"); 
     superagent.get('https://nekos.life/api/v2/img/kuni')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -437,7 +437,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}hgirl`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");   
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/les')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -451,7 +451,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}lewdkemo`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/lewdkemo')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -499,7 +499,7 @@ message.channel.send(helpEmbed);
 }
        if (message.content.startsWith(`${prefix}ngif`)) {
 	    if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+       return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");  
 	     const { body } = await superagent
          .get('https://nekos.life/api/v2/img/ngif')
             const sfwembed = new Discord.RichEmbed()
@@ -513,7 +513,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}lewdnekogif`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");  
     superagent.get('https://nekos.life/api/v2/img/nsfw_neko_gif')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -528,7 +528,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}nsfwavatar`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/nsfw_avatar')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -543,7 +543,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}lewdmoji`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");  
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");  
     superagent.get('https://nekos.life/api/v2/img/gasm')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -591,7 +591,7 @@ message.channel.send(helpEmbed);
 }
    if (message.content.startsWith(`${prefix}clit`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔"); 
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/pussy')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -606,7 +606,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}randomhentai`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/pwankg')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -639,7 +639,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}smallboobs`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/smallboobs')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -665,7 +665,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}sologirl`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/solo')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -680,7 +680,7 @@ message.channel.send(helpEmbed);
   
    if (message.content.startsWith(`${prefix}sologif`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/solog')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -695,7 +695,7 @@ message.channel.send(helpEmbed);
   
   if (message.content.startsWith(`${prefix}spank`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+       return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
        let args = message.content.slice(1).split(" ");
   let spankUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   if(!spankUser) message.channel.send("You can't s-spank me! You pervert!")
@@ -730,7 +730,7 @@ message.channel.send(helpEmbed);
 }
      if (message.content.startsWith(`${prefix}tits`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/tits')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -745,7 +745,7 @@ message.channel.send(helpEmbed);
   
      if (message.content.startsWith(`${prefix}trap`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/trap')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -782,7 +782,7 @@ message.channel.send(helpEmbed);
 }
      if (message.content.startsWith(`${prefix}yuri`)) {
       if (!message.channel.nsfw) 
-        return message.channel.send("⛔THIS CHANNEL IS NOT MARKED AS NSFW, DARLING! GET TO ONE!⛔");
+      return message.channel.send("⛔ YOU AREN'T IN A NSFW CHANNEL! YOU CANNOT USE THIS! ⛔");
     superagent.get('https://nekos.life/api/v2/img/yuri')
         .end((err, response) => {
             const lewdembed = new Discord.RichEmbed()
@@ -847,6 +847,8 @@ message.channel.send(helpEmbed);
 		
     let sicon = message.guild.iconURL;
     let server = message.guild.name;
+    let rolesize = message.guild.roles.size - 1;
+    let realtotal = message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size;
     let serverembed = new Discord.RichEmbed()
     .setTitle("Server Information")
     .setDescription(`Information on ${server}:`)
@@ -855,8 +857,10 @@ message.channel.send(helpEmbed);
     .addField('Server ID', message.guild.id, true)
     .addField('Server Name', message.guild.name, true)
     .addField('Channel Count', message.guild.channels.size, true)
+    .addField('Humans', `${realtotal}`, true)
+    .addField('Bots', `${message.guild.members.filter(m => m.user.bot).size}`, true)
     .addField('Member Count', message.guild.memberCount, true)
-    .addField('Role Count', message.guild.roles.size, true)
+    .addField('Role Count', `${rolesize}`, true)
     .addField('Region', message.guild.region, true)
     .addField('Server Created On', message.guild.createdAt.toLocaleDateString(), true)
     .addField('Server Owner', message.guild.owner, true)
