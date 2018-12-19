@@ -8,7 +8,7 @@ require('moment-duration-format');
 
   client.on("ready", async () => {
   console.log(`${client.user.username} is online!`);
-  client.user.setActivity("b!kisshentai (b!help)");
+  client.user.setActivity("kisshentai (b!help)", {type: "WATCHING"});
 });
 
   
