@@ -797,7 +797,6 @@ message.channel.send(helpEmbed);
 	
 	if (message.content.startsWith(`${prefix}whois`)) {
 
- let member = message.mentions.users.first() || message.author
             let player = message.mentions.members.first() || message.member
             let user = message.mentions.users.first();
             let iicon = player.user.displayAvatarURL;
