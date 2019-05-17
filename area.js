@@ -306,7 +306,7 @@ client.on('message', async (message) => {
 .setDescription(`These are the comamnds for this bot, ones with the label SFW mean they can be used outside of NSFW while NSFW can only be used in NSFW channels. Also if you have never used bots like **Senpai**, **Miki** or **Naughty Time~**, when using most of the fun commands you must mention a user to use the command.`)
 .setColor("#b70000")  
 .setImage(helpImage)
-.addField("❔Information Commands", "botinfo, serverinfo, useravatar, whois.")
+.addField("❔Information Commands", "botinfo, profilepic, serverinfo, whois")
 .addField("📘 Fun SFW Commands", "avatar, baka, cuddle, donate, feed, foxgirl, hug, kiss, lizard, meow, neko, pat, poke, slap, smug, tickle, waifu, wallpaper.")
 .addField("🔞 NSFW Commands", "anal, bjgif, blowjob, cum, eroticholo, erotease, erokemo1, erokemo2, eroyuri, feet, footjob, femdom, futa(futanari), hentai, hgif, hgirl, holoneko, kemo, lewdkemo, lewdnekogif, lewdmoji nsfwavatar, ngif, pussy, pussylick, randomhentai, smallboobs, sologirl, sologif, spank, trap, tits, yuri.")
 message.channel.send(helpEmbed);
@@ -795,38 +795,71 @@ message.channel.send(helpEmbed);
         })
      }
 	
-	if (message.content.startsWith(`${prefix}whois`)) {
+// 	if (message.content.startsWith(`${prefix}whois`)) {
 
-            let player = message.mentions.members.first() || message.member
-            let user = message.mentions.users.first();
+//             let player = message.mentions.members.first() || message.member
+//             let user = message.mentions.users.first();
+//             let iicon = player.user.displayAvatarURL;
+//             let roles = message.mentions.members.first().roles.map(role => role).join(" ");
+//         if(!user) return message.channel.send("You haven't selected/mentioned a user whose info you want to see.");
+//             let userEmbed = new Discord.RichEmbed()
+//             .setAuthor(`${user.username}'s Info`, user.displayAvatarURL)
+//             .setThumbnail(user.displayAvatarURL)
+//             .setColor('#b70000')
+//             .addField('ID', user.id, true)
+//             .addField('Current Tag', user.tag, true)
+//             .addField('Server Nickname', `${player.displayName}`, true) 
+//             .addField('Highest Member Role', `${player.highestRole.name}`, true)
+//             .addField('Roles', `${roles}`, true)
+//             .addField('Game/Playing', `${(user.presence.game && user.presence.game && user.presence.game.name) || 'None'}`, true)
+//             .addField('Status', user.presence.status, true)
+//             .addField('Bot', user.bot, true)
+//             .addField('Joined At:', `${player.joinedAt}`)
+//             .addField('Account Created:', `${player.user.createdAt}`, true)
+//             .setThumbnail(iicon)
+//             .setTimestamp();
+//          return message.channel.send(userEmbed)
+// 	}
+	
+	  		if (message.content.startsWith(`${prefix}whois`)) {
+	    let status = {false: "Human", true: "Bot"}
+	    let args = message.content.split(/ +/g).slice(1) 
+	    let avatarperson = args.join(' ')
+            let player = message.mentions.members.first() || message.guild.members.find(mem => mem.user.id === args[0]) || message.guild.members.find(mem => mem.user.tag === avatarperson) || message.guild.members.find(mem => mem.user.username === avatarperson) || message.guild.members.find(mem => mem.nickname === avatarperson) || message.member
             let iicon = player.user.displayAvatarURL;
-            let roles = message.mentions.members.first().roles.map(role => role).join(" ");
-        if(!user) return message.channel.send("You haven't selected/mentioned a user whose info you want to see.");
-            let userEmbed = new Discord.RichEmbed()
+            //let roles = player.roles.map(role => role).slice(1).join(" ") || "None";
+            let roles = player.roles.filter(r => r.name !== "@everyone").map(r => `<@&${r.id}>`).join(' ').toString() || "None"
+	    let user = player.user
+	    let rolesize = player.roles.size - 1;
+//           if (roles.size > 60) {
+            let highestrole = player.highestRole
+            let toprole = (highestrole != "@everyone") ? highestrole : "No Roles"
+            //let toprole = (user.highestRole != "@everyone") ? user.highestRole : "None"
+	    let userEmbed = new Discord.RichEmbed()
             .setAuthor(`${user.username}'s Info`, user.displayAvatarURL)
             .setThumbnail(user.displayAvatarURL)
             .setColor('#b70000')
-            .addField('ID', user.id, true)
+            .addField('User ID', user.id, true)
             .addField('Current Tag', user.tag, true)
-            .addField('Server Nickname', `${player.displayName}`, true) 
-            .addField('Highest Member Role', `${player.highestRole.name}`, true)
-            .addField('Roles', `${roles}`, true)
+            .addField('Server Nickname', `${player.nickname || "None"}`, true) 
+            .addField('Highest Member Role', toprole, true)
+            .addField(`Roles [${rolesize}]`, `${roles}`)
             .addField('Game/Playing', `${(user.presence.game && user.presence.game && user.presence.game.name) || 'None'}`, true)
             .addField('Status', user.presence.status, true)
-            .addField('Bot', user.bot, true)
-            .addField('Joined At:', `${player.joinedAt}`)
-            .addField('Account Created:', `${player.user.createdAt}`, true)
+            .addField('Bot/Human', status[user.bot], true)
+            .addField('Joined Server On:', `${player.joinedAt}`)
+            .addField('Account Created On:', `${player.user.createdAt}`)
             .setThumbnail(iicon)
             .setTimestamp();
-         return message.channel.send(userEmbed)
-	}
+	return message.channel.send(userEmbed);
+      }
 	
 	if (message.content.startsWith(`${prefix}botinfo`)) {
 
     let bicon = client.user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
     .setTitle("Bot Information")
-    .setDescription(`Information on LewdTime:`)
+    .setDescription(`Information on ${client.user.username}:`)
     .setColor("#b70000")
     .setThumbnail(bicon)
     .addField("Name", client.user.username, true)
@@ -842,37 +875,44 @@ message.channel.send(helpEmbed);
     return message.channel.send(botembed);
   }
   
-	if (message.content.startsWith(`${prefix}serverinfo`)) {
-		
-    let sicon = message.guild.iconURL;
-    let server = message.guild.name;
+	if (message.content.startsWith(`${prefix}serverinfo`)) {	
+    let serverstatus = {0: "Super Low", 1: "Low", 2: "Medium", 3: "High", 4: "Insane", 5:  "Extreme"}
+    // let international = {us-central: "United States | Central
+    let international = {'us-west': 'USA: West Coast', 'us-east': 'USA: East Coast', 'brazil': 'Brazil', 'us-central': 'USA: Central', 'eu-west': 'Europe: Western', 'eu-central': 'Europe: Central', 'hongkong': 'Hong Kong', 'japan': 'Japan', 'russia': "Russia", 'singapore': 'Singapore', 'southafrica': 'South Africa', 'sydney': 'Sydney'}
     let rolesize = message.guild.roles.size - 1;
     let realtotal = message.guild.memberCount - message.guild.members.filter(m => m.user.bot).size;
+    let sicon = message.guild.iconURL;
+    let server = message.guild.name;
+    //let guildtoday = ta.ago();
+    let guildCreated =  message.guild.createdAt.toDateString();//.toString().slice(" ", 15);
     let serverembed = new Discord.RichEmbed()
     .setTitle("Server Information")
     .setDescription(`Information on ${server}:`)
-    .setThumbnail() 
     .setColor("#b70000")
     .addField('Server ID', message.guild.id, true)
     .addField('Server Name', message.guild.name, true)
-    .addField('Channel Count', message.guild.channels.size, true)
+    //.addField('Humans', `${message.guild.members.filter(m => !m.user.bot).size}`, true)]
     .addField('Humans', `${realtotal}`, true)
     .addField('Bots', `${message.guild.members.filter(m => m.user.bot).size}`, true)
+ //   .addField('Online', message.guild.members.filter(m => m.presence.status === "online").size, true)
     .addField('Member Count', message.guild.memberCount, true)
     .addField('Role Count', `${rolesize}`, true)
-    .addField('Region', message.guild.region, true)
-    .addField('Server Created On', message.guild.createdAt.toLocaleDateString(), true)
-    .addField('Server Owner', message.guild.owner, true)
-    .setThumbnail(sicon) 
+    .addField('Channel Count', message.guild.channels.size, true)
+    .addField('Region', international[message.guild.region], true)
+    .addField('Verification Level', serverstatus[message.guild.verificationLevel], true)
+    .addField('Server Created On', `${guildCreated}`, true)
+    .addField('Server Owner', message.guild.owner, true) 
     .setFooter(`${server}`, sicon)
+    .setThumbnail(sicon)
     .setTimestamp();
-   return message.channel.send(serverembed);
+    return message.channel.send(serverembed);
   }
   
-  	  if (message.content.startsWith(`${prefix}useravatar`)) { 
-      let player = message.mentions.members.first() || message.member
+  	  if (message.content.startsWith(`${prefix}profilepic`)) {
+           let membercheck = message.content.split(/ +/g).slice(1) 
+	 let avatar = membercheck.join(' ')
+	   let player = message.mentions.members.first() || message.guild.members.find(mem => mem.id === args[0]) || message.guild.members.find(mem => mem.user.tag === avatar) || message.guild.members.find(mem => mem.user.username === avatar) || message.guild.members.find(mem => mem.nickname === avatar) || message.member
 	   let user = player.user
-if(!user) return message.channel.send("You haven't selected/mentioned a user whose avatar you want to see."); 
     let avatarEmbed = new Discord.RichEmbed()
     .setAuthor(`${user.tag}`, `${user.displayAvatarURL}`)
     .setTitle("Avatar")
