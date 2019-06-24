@@ -7,7 +7,7 @@ const moment = require('moment');
 require('moment-duration-format');
 
   client.on("ready", async () => {
-  console.log(`${client.user.username} is online!`);
+  console.log(`${client.user.username} is online!!`);
   client.user.setActivity("kisshentai (b!help)", {type: "WATCHING"});
 });
 
